@@ -16,8 +16,8 @@ const config: QuartzConfig = {
     enablePopovers: true,
     analytics: null,
     locale: "ru-RU",
-    // Заменить на реальный хост при деплое (внутренний, за VPN).
-    baseUrl: "docs-ba.nirbi.ru",
+    // GitHub Pages (публичный сайт). Форк деплоится в другой org — поменять baseUrl.
+    baseUrl: "nearbyerp.github.io/erp-ba-docs",
     ignorePatterns: ["private", ".obsidian", "_templates", "templates", ".claude"],
     defaultDateType: "modified",
     theme: {
