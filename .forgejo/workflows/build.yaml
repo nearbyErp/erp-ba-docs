@@ -1,0 +1,28 @@
+name: Build Quartz site
+
+# Валидирует сборку BA-сайта на каждый push в main.
+# Контент авторский (папка content/), НЕ клонируется из vault.
+# Цель деплоя (k8s nginx за VPN / статический хостинг) — определить отдельно;
+# Dockerfile в корне уже собирает образ nginx с готовым public/.
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container: node:22-slim
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install deps
+        run: npm ci
+
+      - name: Build site
+        run: npx quartz build
+
+      # Артефакт готов в ./public. Деплой добавляется отдельным шагом
+      # под выбранный таргет (см. Dockerfile для образа nginx).

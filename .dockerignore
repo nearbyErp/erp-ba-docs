@@ -1,0 +1,15 @@
+# vault raw clone (never needed in image)
+vault-content/
+
+# CI and tooling
+.forgejo/
+.github/
+.gitignore
+.gitattributes
+*.md
+
+# Build output (regenerated inside Docker)
+public/
+
+# Node deps (reinstalled inside Docker via npm ci)
+node_modules/
