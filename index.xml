@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+    <channel>
+      <title>НИРБИ ERP — База знаний</title>
+      <link>https://nearbyerp.github.io/erp-ba-docs</link>
+      <description>Последние 10 заметок on НИРБИ ERP — База знаний</description>
+      <generator>Quartz -- quartz.jzhao.xyz</generator>
+      <item>
+    <title>НИРБИ ERP — База знаний</title>
+    <link>https://nearbyerp.github.io/erp-ba-docs/</link>
+    <guid>https://nearbyerp.github.io/erp-ba-docs/</guid>
+    <description><![CDATA[ База знаний платформы НИРБИ ERP для бизнес-анализа — продукты, домены, интеграции. ]]></description>
+    <pubDate>Wed, 08 Jul 2026 16:57:48 GMT</pubDate>
+  </item><item>
+    <title>Домены</title>
+    <link>https://nearbyerp.github.io/erp-ba-docs/%D0%94%D0%BE%D0%BC%D0%B5%D0%BD%D1%8B/</link>
+    <guid>https://nearbyerp.github.io/erp-ba-docs/%D0%94%D0%BE%D0%BC%D0%B5%D0%BD%D1%8B/</guid>
+    <description><![CDATA[ Бизнес-возможности НИРБИ ERP «под капотом» — заказы, каталог, склад, клиенты, лояльность, доступ, магазины. ]]></description>
+    <pubDate>Wed, 08 Jul 2026 16:57:48 GMT</pubDate>
+  </item><item>
+    <title>Заказы</title>
+    <link>https://nearbyerp.github.io/erp-ba-docs/%D0%94%D0%BE%D0%BC%D0%B5%D0%BD%D1%8B/%D0%97%D0%B0%D0%BA%D0%B0%D0%B7%D1%8B</link>
+    <guid>https://nearbyerp.github.io/erp-ba-docs/%D0%94%D0%BE%D0%BC%D0%B5%D0%BD%D1%8B/%D0%97%D0%B0%D0%BA%D0%B0%D0%B7%D1%8B</guid>
+    <description><![CDATA[ Жизненный цикл заказа, статусная модель, позиции и модификаторы, возвраты и агрегация продаж — домен Order Service. ]]></description>
+    <pubDate>Wed, 08 Jul 2026 16:57:48 GMT</pubDate>
+  </item><item>
+    <title>Каталог</title>
+    <link>https://nearbyerp.github.io/erp-ba-docs/%D0%94%D0%BE%D0%BC%D0%B5%D0%BD%D1%8B/%D0%9A%D0%B0%D1%82%D0%B0%D0%BB%D0%BE%D0%B3</link>
+    <guid>https://nearbyerp.github.io/erp-ba-docs/%D0%94%D0%BE%D0%BC%D0%B5%D0%BD%D1%8B/%D0%9A%D0%B0%D1%82%D0%B0%D0%BB%D0%BE%D0%B3</guid>
+    <description><![CDATA[ Товары, категории, модификаторы, стоп-листы и прейскуранты — из чего собирается меню торговой точки. ]]></description>
+    <pubDate>Wed, 08 Jul 2026 16:57:48 GMT</pubDate>
+  </item><item>
+    <title>Клиенты (CRM)</title>
+    <link>https://nearbyerp.github.io/erp-ba-docs/%D0%94%D0%BE%D0%BC%D0%B5%D0%BD%D1%8B/%D0%9A%D0%BB%D0%B8%D0%B5%D0%BD%D1%82%D1%8B</link>
+    <guid>https://nearbyerp.github.io/erp-ba-docs/%D0%94%D0%BE%D0%BC%D0%B5%D0%BD%D1%8B/%D0%9A%D0%BB%D0%B8%D0%B5%D0%BD%D1%82%D1%8B</guid>
+    <description><![CDATA[ CRM-домен НИРБИ — карточки клиентов сети, сегментация в группы и быстрое заведение клиента на кассе. ]]></description>
+    <pubDate>Wed, 08 Jul 2026 16:57:48 GMT</pubDate>
+  </item><item>
+    <title>Лояльность</title>
+    <link>https://nearbyerp.github.io/erp-ba-docs/%D0%94%D0%BE%D0%BC%D0%B5%D0%BD%D1%8B/%D0%9B%D0%BE%D1%8F%D0%BB%D1%8C%D0%BD%D0%BE%D1%81%D1%82%D1%8C</link>
+    <guid>https://nearbyerp.github.io/erp-ba-docs/%D0%94%D0%BE%D0%BC%D0%B5%D0%BD%D1%8B/%D0%9B%D0%BE%D1%8F%D0%BB%D1%8C%D0%BD%D0%BE%D1%81%D1%82%D1%8C</guid>
+    <description><![CDATA[ Три программы удержания клиентов — штампы «N+1», кэшбэк с уровнями и реферальная — начисление и списание баллов на кассе. ]]></description>
+    <pubDate>Wed, 08 Jul 2026 16:57:48 GMT</pubDate>
+  </item><item>
+    <title>Магазины</title>
+    <link>https://nearbyerp.github.io/erp-ba-docs/%D0%94%D0%BE%D0%BC%D0%B5%D0%BD%D1%8B/%D0%9C%D0%B0%D0%B3%D0%B0%D0%B7%D0%B8%D0%BD%D1%8B</link>
+    <guid>https://nearbyerp.github.io/erp-ba-docs/%D0%94%D0%BE%D0%BC%D0%B5%D0%BD%D1%8B/%D0%9C%D0%B0%D0%B3%D0%B0%D0%B7%D0%B8%D0%BD%D1%8B</guid>
+    <description><![CDATA[ Торговые точки: атрибуты и статусы публикации, расписание, столы зала, POS-терминалы, платёжный контур; ТТ как единица доступа сотрудников. ]]></description>
+    <pubDate>Wed, 08 Jul 2026 16:57:48 GMT</pubDate>
+  </item><item>
+    <title>Пользователи и доступ</title>
+    <link>https://nearbyerp.github.io/erp-ba-docs/%D0%94%D0%BE%D0%BC%D0%B5%D0%BD%D1%8B/%D0%9F%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D1%82%D0%B5%D0%BB%D0%B8-%D0%B8-%D0%B4%D0%BE%D1%81%D1%82%D1%83%D0%BF</link>
+    <guid>https://nearbyerp.github.io/erp-ba-docs/%D0%94%D0%BE%D0%BC%D0%B5%D0%BD%D1%8B/%D0%9F%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D1%82%D0%B5%D0%BB%D0%B8-%D0%B8-%D0%B4%D0%BE%D1%81%D1%82%D1%83%D0%BF</guid>
+    <description><![CDATA[ Как устроены сотрудники, роли-права и вход в систему — permission-модель, scope, типы франшизы и авторизация. ]]></description>
+    <pubDate>Wed, 08 Jul 2026 16:57:48 GMT</pubDate>
+  </item><item>
+    <title>Склад</title>
+    <link>https://nearbyerp.github.io/erp-ba-docs/%D0%94%D0%BE%D0%BC%D0%B5%D0%BD%D1%8B/%D0%A1%D0%BA%D0%BB%D0%B0%D0%B4</link>
+    <guid>https://nearbyerp.github.io/erp-ba-docs/%D0%94%D0%BE%D0%BC%D0%B5%D0%BD%D1%8B/%D0%A1%D0%BA%D0%BB%D0%B0%D0%B4</guid>
+    <description><![CDATA[ Товароучёт: техкарты блюд, автосписание ингредиентов при продаже, остатки и партии по торговым точкам. ]]></description>
+    <pubDate>Wed, 08 Jul 2026 16:57:48 GMT</pubDate>
+  </item><item>
+    <title>1C</title>
+    <link>https://nearbyerp.github.io/erp-ba-docs/%D0%98%D0%BD%D1%82%D0%B5%D0%B3%D1%80%D0%B0%D1%86%D0%B8%D0%B8/1C</link>
+    <guid>https://nearbyerp.github.io/erp-ba-docs/%D0%98%D0%BD%D1%82%D0%B5%D0%B3%D1%80%D0%B0%D1%86%D0%B8%D0%B8/1C</guid>
+    <description><![CDATA[ Интеграция ERP с учётной системой 1С — адаптер даёт нашей 1С-обработке доступ к выгрузке продаж и сверке; доступ по токену на франшизу, каждый обмен пишется в журнал прогонов. ]]></description>
+    <pubDate>Wed, 08 Jul 2026 16:57:48 GMT</pubDate>
+  </item>
+    </channel>
+  </rss>
