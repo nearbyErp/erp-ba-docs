@@ -1,6 +1,7 @@
 .DS_Store
 node_modules
 public
+gh-build
 prof
 tsconfig.tsbuildinfo
 .obsidian
