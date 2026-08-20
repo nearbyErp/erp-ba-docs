@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr"><head><title>Если что-то пошло не так</title><meta charset="utf-8"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted Grotesk:wght@400;700&amp;family=Source Sans Pro:ital,wght@0,400;0,600;1,400;1,600&amp;family=IBM Plex Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="og:site_name" content="НИРБИ ERP — База знаний"/><meta property="og:title" content="Если что-то пошло не так"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="Если что-то пошло не так"/><meta name="twitter:description" content="Справочник типовых сбоев кассы 3 в 1 — что видит кассир, что это значит и что делать до звонка в поддержку"/><meta property="og:description" content="Справочник типовых сбоев кассы 3 в 1 — что видит кассир, что это значит и что делать до звонка в поддержку"/><meta property="og:image:alt" content="Справочник типовых сбоев кассы 3 в 1 — что видит кассир, что это значит и что делать до звонка в поддержку"/><meta property="og:image" content="https://nearbyerp.github.io/erp-ba-docs/static/og-image.png"/><meta property="og:image:url" content="https://nearbyerp.github.io/erp-ba-docs/static/og-image.png"/><meta name="twitter:image" content="https://nearbyerp.github.io/erp-ba-docs/static/og-image.png"/><meta property="og:image:type" content="image/.png"/><meta property="twitter:domain" content="nearbyerp.github.io/erp-ba-docs"/><meta property="og:url" content="https://nearbyerp.github.io/erp-ba-docs/Касса-3-в-1/Если-что-то-пошло-не-так"/><meta property="twitter:url" content="https://nearbyerp.github.io/erp-ba-docs/Касса-3-в-1/Если-что-то-пошло-не-так"/><link rel="icon" href="../static/icon.png"/><meta name="description" content="Справочник типовых сбоев кассы 3 в 1 — что видит кассир, что это значит и что делать до звонка в поддержку"/><meta name="generator" content="Quartz"/><link href="../index.css" rel="stylesheet" type="text/css" data-persist="true"/><style>.expand-button {
+  position: absolute;
+  display: flex;
+  float: right;
+  padding: 0.4rem;
+  margin: 0.3rem;
+  right: 0;
+  color: var(--gray);
+  border-color: var(--dark);
+  background-color: var(--light);
+  border: 1px solid;
+  border-radius: 5px;
+  opacity: 0;
+  transition: 0.2s;
+}
+.expand-button > svg {
+  fill: var(--light);
+  filter: contrast(0.3);
+}
+.expand-button:hover {
+  cursor: pointer;
+  border-color: var(--secondary);
+}
+.expand-button:focus {
+  outline: 0;
+}
+
+pre:hover > .expand-button {
+  opacity: 1;
+  transition: 0.2s;
+}
+
+#mermaid-container {
+  position: fixed;
+  contain: layout;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: none;
+  backdrop-filter: blur(4px);
+  background: rgba(0, 0, 0, 0.5);
+}
+#mermaid-container.active {
+  display: inline-block;
+}
+#mermaid-container > #mermaid-space {
+  border: 1px solid var(--lightgray);
+  background-color: var(--light);
+  border-radius: 5px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 80vh;
+  width: 80vw;
+  overflow: hidden;
+}
+#mermaid-container > #mermaid-space > .mermaid-content {
+  position: relative;
+  transform-origin: 0 0;
+  transition: transform 0.1s ease;
+  overflow: visible;
+  min-height: 200px;
+  min-width: 200px;
+}
+#mermaid-container > #mermaid-space > .mermaid-content pre {
+  margin: 0;
+  border: none;
+}
+#mermaid-container > #mermaid-space > .mermaid-content svg {
+  max-width: none;
+  height: auto;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  gap: 8px;
+  padding: 8px;
+  background: var(--light);
+  border: 1px solid var(--lightgray);
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 1px solid var(--lightgray);
+  background: var(--light);
+  color: var(--dark);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: var(--bodyFont);
+  transition: all 0.2s ease;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:hover {
+  background: var(--lightgray);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:active {
+  transform: translateY(1px);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:nth-child(2) {
+  width: auto;
+  padding: 0 12px;
+  font-size: 14px;
+}
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VSb290IjoiQzpcXFVzZXJzXFxhbG1pa1xcbmVhcmJ5RXJwXFxlcnAtYmEtZG9jc1xccXVhcnR6XFxjb21wb25lbnRzXFxzdHlsZXMiLCJzb3VyY2VzIjpbIm1lcm1haWQuaW5saW5lLnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFO0VBQ0E7O0FBR0Y7RUFDRTtFQUNBOztBQUdGO0VBQ0U7OztBQUtGO0VBQ0U7RUFDQTs7O0FBSUo7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7O0FBR0Y7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFO0VBQ0E7O0FBR0Y7RUFDRTtFQUNBOztBQUlKO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTs7QUFHRjtFQUNFOztBQUlGO0VBQ0U7RUFDQTtFQUNBIiwic291cmNlc0NvbnRlbnQiOlsiLmV4cGFuZC1idXR0b24ge1xuICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGZsb2F0OiByaWdodDtcbiAgcGFkZGluZzogMC40cmVtO1xuICBtYXJnaW46IDAuM3JlbTtcbiAgcmlnaHQ6IDA7IC8vIE5PVEU6IHJpZ2h0IHdpbGwgYmUgc2V0IGluIG1lcm1haWQuaW5saW5lLnRzXG4gIGNvbG9yOiB2YXIoLS1ncmF5KTtcbiAgYm9yZGVyLWNvbG9yOiB2YXIoLS1kYXJrKTtcbiAgYmFja2dyb3VuZC1jb2xvcjogdmFyKC0tbGlnaHQpO1xuICBib3JkZXI6IDFweCBzb2xpZDtcbiAgYm9yZGVyLXJhZGl1czogNXB4O1xuICBvcGFjaXR5OiAwO1xuICB0cmFuc2l0aW9uOiAwLjJzO1xuXG4gICYgPiBzdmcge1xuICAgIGZpbGw6IHZhcigtLWxpZ2h0KTtcbiAgICBmaWx0ZXI6IGNvbnRyYXN0KDAuMyk7XG4gIH1cblxuICAmOmhvdmVyIHtcbiAgICBjdXJzb3I6IHBvaW50ZXI7XG4gICAgYm9yZGVyLWNvbG9yOiB2YXIoLS1zZWNvbmRhcnkpO1xuICB9XG5cbiAgJjpmb2N1cyB7XG4gICAgb3V0bGluZTogMDtcbiAgfVxufVxuXG5wcmUge1xuICAmOmhvdmVyID4gLmV4cGFuZC1idXR0b24ge1xuICAgIG9wYWNpdHk6IDE7XG4gICAgdHJhbnNpdGlvbjogMC4ycztcbiAgfVxufVxuXG4jbWVybWFpZC1jb250YWluZXIge1xuICBwb3NpdGlvbjogZml4ZWQ7XG4gIGNvbnRhaW46IGxheW91dDtcbiAgei1pbmRleDogOTk5O1xuICBsZWZ0OiAwO1xuICB0b3A6IDA7XG4gIHdpZHRoOiAxMDB2dztcbiAgaGVpZ2h0OiAxMDB2aDtcbiAgb3ZlcmZsb3c6IGhpZGRlbjtcbiAgZGlzcGxheTogbm9uZTtcbiAgYmFja2Ryb3AtZmlsdGVyOiBibHVyKDRweCk7XG4gIGJhY2tncm91bmQ6IHJnYmEoMCwgMCwgMCwgMC41KTtcblxuICAmLmFjdGl2ZSB7XG4gICAgZGlzcGxheTogaW5saW5lLWJsb2NrO1xuICB9XG5cbiAgJiA+ICNtZXJtYWlkLXNwYWNlIHtcbiAgICBib3JkZXI6IDFweCBzb2xpZCB2YXIoLS1saWdodGdyYXkpO1xuICAgIGJhY2tncm91bmQtY29sb3I6IHZhcigtLWxpZ2h0KTtcbiAgICBib3JkZXItcmFkaXVzOiA1cHg7XG4gICAgcG9zaXRpb246IGZpeGVkO1xuICAgIHRvcDogNTAlO1xuICAgIGxlZnQ6IDUwJTtcbiAgICB0cmFuc2Zvcm06IHRyYW5zbGF0ZSgtNTAlLCAtNTAlKTtcbiAgICBoZWlnaHQ6IDgwdmg7XG4gICAgd2lkdGg6IDgwdnc7XG4gICAgb3ZlcmZsb3c6IGhpZGRlbjtcblxuICAgICYgPiAubWVybWFpZC1jb250ZW50IHtcbiAgICAgIHBvc2l0aW9uOiByZWxhdGl2ZTtcbiAgICAgIHRyYW5zZm9ybS1vcmlnaW46IDAgMDtcbiAgICAgIHRyYW5zaXRpb246IHRyYW5zZm9ybSAwLjFzIGVhc2U7XG4gICAgICBvdmVyZmxvdzogdmlzaWJsZTtcbiAgICAgIG1pbi1oZWlnaHQ6IDIwMHB4O1xuICAgICAgbWluLXdpZHRoOiAyMDBweDtcblxuICAgICAgcHJlIHtcbiAgICAgICAgbWFyZ2luOiAwO1xuICAgICAgICBib3JkZXI6IG5vbmU7XG4gICAgICB9XG5cbiAgICAgIHN2ZyB7XG4gICAgICAgIG1heC13aWR0aDogbm9uZTtcbiAgICAgICAgaGVpZ2h0OiBhdXRvO1xuICAgICAgfVxuICAgIH1cblxuICAgICYgPiAubWVybWFpZC1jb250cm9scyB7XG4gICAgICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gICAgICBib3R0b206IDIwcHg7XG4gICAgICByaWdodDogMjBweDtcbiAgICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgICBnYXA6IDhweDtcbiAgICAgIHBhZGRpbmc6IDhweDtcbiAgICAgIGJhY2tncm91bmQ6IHZhcigtLWxpZ2h0KTtcbiAgICAgIGJvcmRlcjogMXB4IHNvbGlkIHZhcigtLWxpZ2h0Z3JheSk7XG4gICAgICBib3JkZXItcmFkaXVzOiA2cHg7XG4gICAgICBib3gtc2hhZG93OiAwIDJweCA0cHggcmdiYSgwLCAwLCAwLCAwLjEpO1xuICAgICAgei1pbmRleDogMjtcblxuICAgICAgLm1lcm1haWQtY29udHJvbC1idXR0b24ge1xuICAgICAgICBkaXNwbGF5OiBmbGV4O1xuICAgICAgICBhbGlnbi1pdGVtczogY2VudGVyO1xuICAgICAgICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcbiAgICAgICAgd2lkdGg6IDMycHg7XG4gICAgICAgIGhlaWdodDogMzJweDtcbiAgICAgICAgcGFkZGluZzogMDtcbiAgICAgICAgYm9yZGVyOiAxcHggc29saWQgdmFyKC0tbGlnaHRncmF5KTtcbiAgICAgICAgYmFja2dyb3VuZDogdmFyKC0tbGlnaHQpO1xuICAgICAgICBjb2xvcjogdmFyKC0tZGFyayk7XG4gICAgICAgIGJvcmRlci1yYWRpdXM6IDRweDtcbiAgICAgICAgY3Vyc29yOiBwb2ludGVyO1xuICAgICAgICBmb250LXNpemU6IDE2cHg7XG4gICAgICAgIGZvbnQtZmFtaWx5OiB2YXIoLS1ib2R5Rm9udCk7XG4gICAgICAgIHRyYW5zaXRpb246IGFsbCAwLjJzIGVhc2U7XG5cbiAgICAgICAgJjpob3ZlciB7XG4gICAgICAgICAgYmFja2dyb3VuZDogdmFyKC0tbGlnaHRncmF5KTtcbiAgICAgICAgfVxuXG4gICAgICAgICY6YWN0aXZlIHtcbiAgICAgICAgICB0cmFuc2Zvcm06IHRyYW5zbGF0ZVkoMXB4KTtcbiAgICAgICAgfVxuXG4gICAgICAgIC8vIFN0eWxlIHRoZSByZXNldCBidXR0b24gZGlmZmVyZW50bHlcbiAgICAgICAgJjpudGgtY2hpbGQoMikge1xuICAgICAgICAgIHdpZHRoOiBhdXRvO1xuICAgICAgICAgIHBhZGRpbmc6IDAgMTJweDtcbiAgICAgICAgICBmb250LXNpemU6IDE0cHg7XG4gICAgICAgIH1cbiAgICAgIH1cbiAgICB9XG4gIH1cbn1cbiJdfQ== */</style><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" data-persist="true"/><script src="../prescript.js" type="application/javascript" data-persist="true"></script><script type="application/javascript" data-persist="true">const fetchData = fetch("../static/contentIndex.json").then(data => data.json())</script><link rel="alternate" type="application/rss+xml" title="RSS Feed" href="https://nearbyerp.github.io/erp-ba-docs/index.xml"/></head><body data-slug="Касса-3-в-1/Если-что-то-пошло-не-так"><div id="quartz-root" class="page"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href="..">НИРБИ ERP — База знаний</a></h2><div class="spacer mobile-only"></div><div class="flex-component" style="flex-direction: row; flex-wrap: nowrap; gap: 1rem;"><div style="flex-grow: 1; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><div class="search"><button class="search-button"><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg><p>Поиск</p></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="Найти что-нибудь" placeholder="Найти что-нибудь"/><div class="search-layout" data-preview="true"></div></div></div></div></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="darkmode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="Тёмный режим"><title>Тёмный режим</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="Светлый режим"><title>Светлый режим</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="readermode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="readerIcon" fill="currentColor" stroke="currentColor" stroke-width="0.2" stroke-linecap="round" stroke-linejoin="round" width="64px" height="64px" viewBox="0 0 24 24" aria-label="Режим чтения"><title>Режим чтения</title><g transform="translate(-1.8, -1.8) scale(1.15, 1.2)"><path d="M8.9891247,2.5 C10.1384702,2.5 11.2209868,2.96705384 12.0049645,3.76669482 C12.7883914,2.96705384 13.8709081,2.5 15.0202536,2.5 L18.7549359,2.5 C19.1691495,2.5 19.5049359,2.83578644 19.5049359,3.25 L19.5046891,4.004 L21.2546891,4.00457396 C21.6343849,4.00457396 21.9481801,4.28672784 21.9978425,4.6528034 L22.0046891,4.75457396 L22.0046891,20.25 C22.0046891,20.6296958 21.7225353,20.943491 21.3564597,20.9931534 L21.2546891,21 L2.75468914,21 C2.37499337,21 2.06119817,20.7178461 2.01153575,20.3517706 L2.00468914,20.25 L2.00468914,4.75457396 C2.00468914,4.37487819 2.28684302,4.061083 2.65291858,4.01142057 L2.75468914,4.00457396 L4.50368914,4.004 L4.50444233,3.25 C4.50444233,2.87030423 4.78659621,2.55650904 5.15267177,2.50684662 L5.25444233,2.5 L8.9891247,2.5 Z M4.50368914,5.504 L3.50468914,5.504 L3.50468914,19.5 L10.9478955,19.4998273 C10.4513189,18.9207296 9.73864328,18.5588115 8.96709342,18.5065584 L8.77307039,18.5 L5.25444233,18.5 C4.87474657,18.5 4.56095137,18.2178461 4.51128895,17.8517706 L4.50444233,17.75 L4.50368914,5.504 Z M19.5049359,17.75 C19.5049359,18.1642136 19.1691495,18.5 18.7549359,18.5 L15.2363079,18.5 C14.3910149,18.5 13.5994408,18.8724714 13.0614828,19.4998273 L20.5046891,19.5 L20.5046891,5.504 L19.5046891,5.504 L19.5049359,17.75 Z M18.0059359,3.999 L15.0202536,4 L14.8259077,4.00692283 C13.9889509,4.06666544 13.2254227,4.50975805 12.7549359,5.212 L12.7549359,17.777 L12.7782651,17.7601316 C13.4923805,17.2719483 14.3447024,17 15.2363079,17 L18.0059359,16.999 L18.0056891,4.798 L18.0033792,4.75457396 L18.0056891,4.71 L18.0059359,3.999 Z M8.9891247,4 L6.00368914,3.999 L6.00599909,4.75457396 L6.00599909,4.75457396 L6.00368914,4.783 L6.00368914,16.999 L8.77307039,17 C9.57551536,17 10.3461406,17.2202781 11.0128313,17.6202194 L11.2536891,17.776 L11.2536891,5.211 C10.8200889,4.56369974 10.1361548,4.13636104 9.37521067,4.02745763 L9.18347055,4.00692283 L8.9891247,4 Z"></path></g></svg></button></div></div><div class="explorer" data-behavior="link" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a,b)=>!a.isFolder&amp;&amp;!b.isFolder||a.isFolder&amp;&amp;b.isFolder?a.displayName.localeCompare(b.displayName,void 0,{numeric:!0,sensitivity:\&quot;base\&quot;}):!a.isFolder&amp;&amp;b.isFolder?1:-1&quot;,&quot;filterFn&quot;:&quot;node=>node.slugSegment!==\&quot;tags\&quot;&quot;,&quot;mapFn&quot;:&quot;node=>node&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-24"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2>Проводник</h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-24" class="explorer-content" aria-expanded="false" role="group"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#"></a></li></template><template id="template-folder"><li><div class="folder-container"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="../">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../Касса-3-в-1/">Касса 3 в 1</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>Если что то пошло не так</a></div></nav><h1 class="article-title">Если что-то пошло не так</h1><p show-comma="true" class="content-meta"><time datetime="2026-08-20T18:34:57.565Z">20 авг. 2026 г.</time><span>время чтения ~12 мин.</span></p><ul class="tags"><li><a href="../tags/продукт" class="internal tag-link">продукт</a></li></ul></div></div><article class="popover-hint"><blockquote class="callout info" data-callout="info">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>Кратко </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>Рабочий справочник для кассира и владельца точки. Слева — то, что написано на экране кассы 3 в 1, справа — что за этим стоит и какое действие правильное.
+Главное правило: обрыв связи не означает, что деньги не списаны. Если исход операции неизвестен, касса так и пишет — и в этот момент нельзя пробивать второй чек.
+Большинство случаев кассир закрывает сам. Красная зона — деньги списаны без чека, заполненный или просроченный накопитель, отказ по системе налогообложения.</p>
+</div>
+</blockquote>
+<h2 id="как-читать-таблицу">Как читать таблицу<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#как-читать-таблицу" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li><strong>Что видит кассир</strong> — формулировка на экране кассы 3 в 1 (смарт-терминал Unitodi K10-F), приведена близко к экранной.</li>
+<li><strong>Что это значит</strong> — что произошло на самом деле и где сейчас деньги.</li>
+<li><strong>Что делать</strong> — действие кассира прямо у стойки.</li>
+<li><strong>Когда звать поддержку</strong> — граница, после которой продолжать самому не нужно.</li>
+</ul>
+<blockquote class="callout tip" data-callout="tip">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>Первый шаг почти всегда один </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>Открыть на кассе экран <strong>«Устройство»</strong> (меню кассы). Крупная строка сверху отвечает на единственный вопрос — можно ли продавать, — а ниже лежат разделы «Фискальный накопитель», «Печать», «Эквайринг» и «Связь» с текущими значениями. Действий на экране два — «Обновить» и «Подключиться заново». Если в строке состояния показан машинный код, его и называют в поддержке.</p>
+</div>
+</blockquote>
+<blockquote class="callout warning" data-callout="warning">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>О чём этот экран не предупредит </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>На нём нет счётчика документов, не переданных оператору фискальных данных, нет срока и заполненности накопителя, нет предупреждений о смене старше суток и о закончившейся ленте. Эти четыре вещи держит на себе точка: смену закрывают в конце дня, срок накопителя владелец помнит по отчёту о регистрации, ленту меняет кассир, а очередь документов видна в личном кабинете вашего оператора фискальных данных.</p>
+</div>
+</blockquote>
+<h2 id="что-делать-если">Что делать, если…<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#что-делать-если" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>Что видит кассир</th><th>Что это значит</th><th>Что делать</th><th>Когда звать поддержку</th></tr></thead><tbody><tr><td>Смена открылась, но оплата картой погашена с подписью <strong>«Платёжный терминал недоступен — принимайте оплату наличными»</strong></td><td>При открытии смены касса проверяет связь банковской части с банком. Проверка не прошла — приём карт закрыт <strong>до конца этой смены</strong>. Наличные принимаются как обычно</td><td>Работать наличными. Проверить интернет на точке. Признак снимется только со следующей сменой — закрыть смену как обычно и открыть новую</td><td>Если и следующая смена открывается «только наличными» — звонить, не открывая третью</td></tr><tr><td>Оплата стоит на шаге <strong>«Приложите карту»</strong>, ниже появилось <strong>«идёт дольше обычного»</strong></td><td>Терминал ждёт карту. Касса даёт ему несколько минут и раньше него операцию не обрывает</td><td>Попросить гостя приложить карту ещё раз. Если гость передумал — нажать <strong>«Отменить оплату»</strong> (кнопка есть именно на этом шаге). Отказ «Операция прервана» означает, что деньги не списаны и чек можно пробить заново</td><td>Если «Отменить оплату» не помогает и экран не двигается дольше 3–5 минут</td></tr><tr><td><strong>«Проверка в банке»</strong>, кнопки отмены нет</td><td>Запрос ушёл в банк. На этом шаге отмены нет: деньги могут быть уже списаны</td><td>Ждать. Не выключать кассу, не пробивать второй чек</td><td>Если шаг не сменился дольше 5 минут</td></tr><tr><td><strong>«Уточняем исход оплаты»</strong></td><td>Связь с терминалом прервалась, и касса пока не знает, прошло списание или нет. Она сама переспрашивает исход</td><td>Ждать, оплату не повторять. Касса сама покажет «Оплачено» либо отказ</td><td>Если состояние держится дольше 5 минут — оставить заказ как есть и позвонить</td></tr><tr><td><strong>«Возвращаем деньги»</strong>, затем отказ</td><td>Карта прошла, а фискальный чек не сформировался. Касса сама отменила списание</td><td>Сказать гостю, что оплата отменена, и провести её заново. Убедиться по терминалу, что возврат прошёл</td><td>Если и вторая попытка не даёт чек</td></tr><tr><td><strong>«Нужна сверка»</strong> — деньги списаны, чека нет</td><td>Списание состоялось, чек не вышел, автоматический возврат не удался. Само это состояние не разрешится</td><td>Оплату <strong>не повторять</strong>. Записать номер заказа и время, позвать администратора точки</td><td>Сразу. Чек коррекции на этой кассе не оформляется — документ проводит бухгалтерия</td></tr><tr><td>Смена не закрывалась больше суток</td><td>Смена живёт сутки. Пока её не закрыли, продавать в ней нельзя, и касса об этом не напоминает — за сроком следит кассир</td><td>Закрыть смену (Z-отчёт) на экране «Касса» и открыть новую. Расхождение по наличным закрытию не мешает — мешают только неоплаченные заказы смены</td><td>Если Z-отчёт не проходит с ошибкой устройства</td></tr><tr><td>При открытии смены — блок <strong>«На кассе незакрытая смена»</strong></td><td>На самом устройстве осталась открытая смена, которой нет в личном кабинете, либо она старше суток. Новую смену устройство не откроет</td><td>Нажать <strong>«Снять Z и открыть заново»</strong>: после успешного отчёта касса переоткроет смену сама. Повторное нажатие безопасно — ответ «смена закрыта» считается успехом</td><td>Если и после Z смена не открывается</td></tr><tr><td><strong>«Нет связи — заказ сохранён на кассе и отправится автоматически»</strong>, номер вида <strong>OFF-XXXX</strong></td><td>Интернета нет. Наличная продажа проходит: чек пробивается на самом устройстве, заказ уйдёт в личный кабинет при появлении связи</td><td>Продолжать принимать <strong>наличные</strong>. Карты в это время не проводятся, смену открыть или закрыть тоже не получится</td><td>Если связь вернулась, а номера заказов остаются вида OFF-XXXX больше часа</td></tr><tr><td>Интернет на точке не работает сутки и дольше</td><td>Чеки пробиваются и копятся в накопителе, но не доходят до оператора фискальных данных. Касса об этом не предупреждает — счётчика непереданных документов на её экранах нет</td><td>Восстановить интернет — очередь уйдёт сама, нажимать ничего не нужно. Проверить, что она ушла, можно в личном кабинете оператора фискальных данных</td><td>Если восстановить связь нечем — звонить не откладывая: через 30 календарных дней без подтверждения касса заблокируется</td></tr><tr><td>Чек не выходит на ленту, хотя оплата прошла</td><td>Закончилась или замялась чековая лента. Следить за наличием ленты — задача кассира</td><td>Заменить рулон. Оплата, которая уже прошла, состоялась — <strong>повторно её не проводить</strong>. Повторной печати документа на этой кассе нет</td><td>Если после замены рулона чеки всё равно не печатаются</td></tr><tr><td>После перезагрузки погашены оба способа оплаты: сверху <strong>«С кассовым модулем работать нельзя»</strong>, у оплаты — подпись <strong>«Платёжный терминал недоступен — принимайте оплату наличными»</strong></td><td>Банковская часть после включения питания перестала отвечать. Касса пробует восстановить её сама. Пока она не поднялась, <strong>не проходят и наличные</strong>: чек всё равно печатает кассовый модуль, поэтому подписи про наличные в этот момент верить нельзя</td><td>Подождать 3–5 минут, нажать «Обновить» на экране «Устройство» и повторить. Гостям сказать, что касса перезапускается</td><td>Если через 10 минут оба способа оплаты по-прежнему погашены — звонить: дальше касса сама не восстановится</td></tr><tr><td>Кассу выключили из розетки или она перезагрузилась посреди операции</td><td>Касса поднимается после включения питания сама. Незавершённая операция не считается отменённой — её исход касса дозапросит</td><td>Дождаться загрузки, открыть заказ и посмотреть его состояние. Второй чек на те же деньги не пробивать</td><td>Если приложение кассы не открылось само или заказ так и остался без исхода</td></tr><tr><td>Чек не пробивается, в тексте отказа упомянута система налогообложения</td><td>Систему налогообложения касса берёт из собственной регистрации. Если при регистрации ККТ разрешено больше одной системы, выбрать между ними нельзя ни на кассе, ни в личном кабинете — и тогда касса отказывает в каждом чеке</td><td>Кассиру не чинится. Продажи на этой кассе остановить</td><td>Сразу: касса должна быть зарегистрирована ровно на одну систему налогообложения, иначе нужна перерегистрация</td></tr><tr><td>Продажи и возвраты не проходят, а срок фискального накопителя вышел или он заполнен</td><td>Накопитель исчерпан по сроку или по объёму — до замены касса не работает. Заранее касса об этом не предупреждает: в разделе «Фискальный накопитель» срок и место показаны как неизвестные</td><td>Продажи на этой кассе прекратить</td><td>Сразу: замену накопителя и перерегистрацию делает специалист</td></tr><tr><td><strong>«Касса не готова к работе (код …)»</strong> или <strong>«Кассовый модуль не готов»</strong></td><td>Служебная или печатающая часть кассы не отвечает. Это состояние не связано с бумагой — проверять ленту в этом случае не нужно</td><td>Открыть «Устройство» → <strong>«Подключиться заново»</strong>. Не помогло — перезагрузить устройство</td><td>Если строка осталась после перезагрузки. Назвать поддержке код из скобок</td></tr></tbody></table></div>
+<h3 id="реже-но-встречается">Реже, но встречается<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#реже-но-встречается" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>Что видит кассир</th><th>Что это значит</th><th>Что делать</th><th>Когда звать поддержку</th></tr></thead><tbody><tr><td>Полоса <strong>«Касса не подтвердила нажатие»</strong></td><td>Денежная кнопка нажата, ответ от кассы не пришёл. Пока исход неизвестен, повтор закрыт</td><td>Сначала посмотреть на терминал и на ленту: операция могла пройти. Повтор — только отдельной кнопкой в этой же полосе</td><td>Если непонятно, прошла операция или нет</td></tr><tr><td><strong>«Возврат №… записан — НЕ оформляйте его повторно»</strong></td><td>Возврат уже записан, а терминал на него не ответил</td><td>Возврат на кассе <strong>не повторять</strong>. Позвать администратора</td><td>Сразу: сумма выверяется вручную</td></tr><tr><td><strong>«Деньги возвращены. Сообщите администратору, чтобы он сверил заказ»</strong></td><td>Возврат на терминале прошёл, до личного кабинета он не дошёл</td><td>Отдать деньги гостю, передать администратору номер заказа</td><td>Если после сверки заказ остаётся «Оплачен»</td></tr><tr><td><strong>«Возврат свыше 1000 ₽ подтверждает администратор — оформите его на основной кассе»</strong></td><td>Возврат дороже 1000 рублей на этой кассе не оформляется</td><td>Оформить возврат на основной кассе точки</td><td>Если основной кассы на точке нет — вопрос к администратору</td></tr></tbody></table></div>
+<h2 id="состояния-оплаты--что-означает-каждое">Состояния оплаты — что означает каждое<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#состояния-оплаты--что-означает-каждое" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>Экран оплаты называет текущий шаг словами. По нему видно, где деньги и можно ли ещё отменять.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>Надпись</th><th>Где сейчас деньги</th><th>Можно ли отменить</th></tr></thead><tbody><tr><td><strong>Готовим оплату</strong></td><td>Списания ещё не было</td><td>Да, кнопка «Отменить оплату»</td></tr><tr><td><strong>Приложите карту</strong></td><td>Списания ещё не было, терминал ждёт гостя</td><td>Да, кнопка «Отменить оплату»</td></tr><tr><td><strong>Проверка в банке</strong></td><td>Запрос у банка, деньги могут уйти в любой момент</td><td>Нет</td></tr><tr><td><strong>Печатаем чек</strong></td><td>Деньги списаны, формируется фискальный чек</td><td>Нет</td></tr><tr><td><strong>Оплачено</strong></td><td>Операция завершена</td><td>Нет, дальше только возврат</td></tr><tr><td><strong>Уточняем исход оплаты</strong></td><td>Неизвестно — касса переспрашивает терминал</td><td>Нет, повторять оплату нельзя</td></tr><tr><td><strong>Возвращаем деньги</strong></td><td>Чек не вышел, касса сама отменяет списание</td><td>Нет, идёт автоматически</td></tr><tr><td><strong>Нужна сверка</strong></td><td>Деньги списаны, чека нет, автоотмена не удалась</td><td>Нет, нужен администратор</td></tr></tbody></table></div>
+<blockquote class="callout note" data-callout="note">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>Уход с экрана — не отмена </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>Если кассир вышел с экрана оплаты, пока операция идёт, она продолжается. Исход касса доберёт сама и покажет в карточке заказа. Заказ, оставшийся без исхода, — повод позвонить, а не повод пробить чек заново.</p>
+</div>
+</blockquote>
+<h2 id="три-тяжёлых-случая-по-шагам">Три тяжёлых случая по шагам<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#три-тяжёлых-случая-по-шагам" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="деньги-списаны-чека-нет">Деньги списаны, чека нет<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#деньги-списаны-чека-нет" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ol>
+<li>Не повторять оплату и не выдавать позицию второй раз.</li>
+<li>Записать номер заказа, время, сумму, RRN и код авторизации из карточки заказа.</li>
+<li>Если банковский слип напечатался — сохранить его.</li>
+<li>Позвать администратора точки; продажи на кассе при этом продолжаются.</li>
+<li>Гостю сказать: «оплата уточняется, чек будет» — и не проводить оплату второй раз.</li>
+</ol>
+<p>Чек коррекции на этой кассе не оформляется: документ проводит бухгалтерия по данным, которые вы записали в пункте 2.</p>
+<h3 id="на-кассе-осталась-незакрытая-смена">На кассе осталась незакрытая смена<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#на-кассе-осталась-незакрытая-смена" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ol>
+<li>На экране «Касса» появится блок <strong>«На кассе незакрытая смена»</strong> — это не поломка, а обычное состояние после сбоя или после суток.</li>
+<li>Нажать <strong>«Снять Z и открыть заново»</strong>.</li>
+<li>Дождаться отчёта. Повторное нажатие безопасно: ответ «смена закрыта» касса считает успехом.</li>
+<li>Смена откроется сама. Если нет — звонить, не пытаясь открыть её третий раз.</li>
+</ol>
+<h3 id="накопитель-заполнен-или-истёк-его-срок">Накопитель заполнен или истёк его срок<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#накопитель-заполнен-или-истёк-его-срок" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ol>
+<li>Продажи и возвраты на этой кассе прекратить — устройство их не проведёт.</li>
+<li>Сообщить владельцу точки: замена накопителя и перерегистрация делаются специалистом и требуют времени.</li>
+<li>До замены точка работает на другой кассе, если она есть.</li>
+</ol>
+<p>Дату окончания накопителя касса не показывает и заранее о ней не предупреждает — её держит у себя владелец по отчёту о регистрации.</p>
+<blockquote class="callout warning" data-callout="warning">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>Про 30 дней </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>Если чеки не доходят до оператора фискальных данных 30 календарных дней, устройство блокируется целиком: ни продаж, ни возвратов, ни закрытия смены. Разблокировка происходит сама, как только связь восстановится и очередь уйдёт. Счётчика непереданных документов на кассе нет — очередь и дату самого старого неподтверждённого документа видно только в личном кабинете вашего оператора фискальных данных. Вывод для точки один: интернет должен быть всегда, а обрыв связи на сутки и дольше — повод звонить, а не ждать.</p>
+</div>
+</blockquote>
+<h2 id="что-не-является-поломкой">Что не является поломкой<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#что-не-является-поломкой" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>Что кажется сбоем</th><th>Почему это норма</th></tr></thead><tbody><tr><td>X-отчёт снялся, но бумага не вышла</td><td>У промежуточного отчёта на этой кассе нет печатной формы. Итоги смотрят на экране</td></tr><tr><td>При закрытии смены строка <strong>«X-отчёт терминала»</strong> всегда красная, подсказка «Терминал не ответил»</td><td>Промежуточного отчёта у банковской части этой кассы нет вовсе, и запрос к ней возвращается отказом. Терминал при этом исправен, закрытию смены это не мешает — продолжайте обычным порядком</td></tr><tr><td>На экране смены пустые списки по способам оплаты и ставкам НДС</td><td>Разбивка по способам оплаты и по ставкам НДС на этой кассе не выводится. Итоговые суммы смены смотрят на экране «Касса», подробная отчётность — в личном кабинете</td></tr><tr><td>Пропал интернет, а касса продолжает работать</td><td>Наличные продажи идут офлайн, чек пробивается на самом устройстве, заказы уйдут в личный кабинет позже</td></tr><tr><td>Расхождение по наличным при закрытии смены</td><td>Закрытие не запрещено: кнопка меняет подпись на «Закрыть с расхождениями», расхождение уходит в отчёт</td></tr><tr><td>Ручная скидка исчезла после правки чека</td><td>Если после изменения чека скидка стала превышать лимит без подтверждения, касса снимает её и пишет причину</td></tr><tr><td>Товар не находится в каталоге или плитка погашена</td><td>Позиция снята с продажи либо помечена «Нет в меню дня». Меняется не на кассе</td></tr><tr><td>Вкладки «Продажа», «Чек», «Заказы» погашены</td><td>Смена закрыта — сначала открыть смену на экране «Касса»</td></tr><tr><td>Плитки товаров без фотографий</td><td>Так и задумано: на этой кассе каталог текстовый</td></tr></tbody></table></div>
+<h2 id="чего-делать-нельзя">Чего делать нельзя<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#чего-делать-нельзя" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<blockquote class="callout warning" data-callout="warning">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>Три действия, которые превращают мелкий сбой в разбор с деньгами </p></div>
+                  
+                </div>
+<div class="callout-content">
+<ol>
+<li><strong>Пробивать второй чек вслепую.</strong> Если касса пишет «Уточняем исход оплаты», «Нужна сверка» или просто молчит — списание могло состояться. Второй чек на те же деньги отменяется потом только через бухгалтерию.</li>
+<li><strong>Выключать кассу или вынимать её из розетки во время операции.</strong> Пока идёт оплата, возврат или закрытие смены, питание не трогают — нужно дождаться, пока экран назовёт исход операции.</li>
+<li><strong>Повторять возврат, который касса уже записала.</strong> Текст «Возврат №… записан — НЕ оформляйте его повторно» означает ровно это: второй возврат уйдёт второй выплатой по одному заказу, и заметят это только на сверке.</li>
+</ol>
+</div>
+</blockquote>
+<p>Дополнительно:</p>
+<ul>
+<li>Не нажимать денежные кнопки повторно «на всякий случай»: повтор оформляется отдельной кнопкой в полосе с предупреждением.</li>
+<li>Не искать отмену на шаге «Проверка в банке» — её там нет.</li>
+<li>Не считать отказ терминала в отмене доказательством того, что деньги не списаны. Такой отказ означает «неизвестно», а не «денег не брали».</li>
+<li>Не пытаться поправить систему налогообложения настройками: её нет ни на кассе, ни в личном кабинете — состав систем меняется только перерегистрацией ККТ.</li>
+<li>Не пытаться поправить заполненный или просроченный накопитель на самой кассе — это работа специалиста.</li>
+<li>Не закрывать смену, пока в ней есть неоплаченные заказы: касса их и не отпустит.</li>
+</ul>
+<h2 id="что-приготовить-перед-обращением-в-поддержку">Что приготовить перед обращением в поддержку<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#что-приготовить-перед-обращением-в-поддержку" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>Чем точнее эти пять пунктов, тем быстрее разбор. Обращение без номера заказа и времени почти всегда возвращается уточняющим вопросом.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>Что нужно</th><th>Где взять</th></tr></thead><tbody><tr><td><strong>Номер заказа или номер чека</strong></td><td>Вкладка «Заказы» на кассе; бумажный чек</td></tr><tr><td><strong>Дата и время операции</strong></td><td>Экран исхода оплаты или карточка заказа</td></tr><tr><td><strong>Что было на экране</strong> — точная формулировка и машинный код, если он показан</td><td>Экран оплаты либо экран «Устройство»</td></tr><tr><td><strong>Сумма и способ оплаты</strong> — наличные или карта</td><td>Карточка заказа</td></tr><tr><td><strong>Состояние точки</strong> — открыта ли смена, есть ли интернет, принимаются ли карты</td><td>Экран «Касса» и экран «Устройство»</td></tr></tbody></table></div>
+<blockquote class="callout note" data-callout="note">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>Если деньги списаны, а чека нет </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>К пяти пунктам добавьте реквизиты банковской операции из карточки заказа — RRN и код авторизации — и сохраните банковский слип, если он напечатался. Гостю в этот момент правильнее сказать «оплата уточняется, чек будет», чем проводить оплату второй раз.</p>
+</div>
+</blockquote>
+<blockquote class="callout tip" data-callout="tip">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>Что кассир решает сам, а что нет </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p><strong>Сам:</strong> замена ленты, повторная оплата после явного отказа, снятие Z по подсказке кассы, переход на наличные, «Обновить» и «Подключиться заново» на экране «Устройство».
+<strong>Не сам:</strong> любые случаи со списанными деньгами без чека, отказ по системе налогообложения, заполненный или просроченный накопитель, возврат дороже 1000 рублей, банковская часть, которая не поднялась сама.</p>
+</div>
+</blockquote>
+<h2 id="смежные-страницы">Смежные страницы<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#смежные-страницы" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li><a href="../Касса-3-в-1/Работа-кассира" class="internal alias" data-slug="Касса-3-в-1/Работа-кассира">Работа кассира</a> — обычный порядок смены, продажи и возврата</li>
+<li><a href="../Касса-3-в-1/Чего-касса-не-умеет" class="internal alias" data-slug="Касса-3-в-1/Чего-касса-не-умеет">Чего касса не умеет</a> — операции, которых на этой кассе нет вовсе</li>
+<li><a href="../Касса-3-в-1/Обязанности-владельца" class="internal alias" data-slug="Касса-3-в-1/Обязанности-владельца">Обязанности владельца</a> — накопитель, оператор фискальных данных, интернет на точке</li>
+<li><a href="../Касса-3-в-1/Термины" class="internal alias" data-slug="Касса-3-в-1/Термины">Термины</a> — накопитель, Z-отчёт, RRN, слип и другие слова из таблиц выше</li>
+</ul>
+<hr/>
+<blockquote class="callout note" data-callout="note">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>Актуальность </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>Описан функционал кассы 3 в 1 по состоянию на 20.08.2026.</p>
+</div>
+</blockquote></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="graph"><h3>Вид графа</h3><div class="graph-outer"><div class="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:false,&quot;enableRadial&quot;:false}"></div><button class="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+                s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+                c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+                C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+                c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+                v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+                s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+                C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+                S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+                s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div class="global-graph-outer"><div class="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.2,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true,&quot;enableRadial&quot;:true}"></div></div></div><div class="toc desktop-only"><button type="button" class="toc-header" aria-controls="toc-14" aria-expanded="true"><h3>Оглавление</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul id="list-1" class="toc-content overflow"><li class="depth-0"><a href="#как-читать-таблицу" data-for="как-читать-таблицу">Как читать таблицу</a></li><li class="depth-0"><a href="#что-делать-если" data-for="что-делать-если">Что делать, если…</a></li><li class="depth-1"><a href="#реже-но-встречается" data-for="реже-но-встречается">Реже, но встречается</a></li><li class="depth-0"><a href="#состояния-оплаты--что-означает-каждое" data-for="состояния-оплаты--что-означает-каждое">Состояния оплаты — что означает каждое</a></li><li class="depth-0"><a href="#три-тяжёлых-случая-по-шагам" data-for="три-тяжёлых-случая-по-шагам">Три тяжёлых случая по шагам</a></li><li class="depth-1"><a href="#деньги-списаны-чека-нет" data-for="деньги-списаны-чека-нет">Деньги списаны, чека нет</a></li><li class="depth-1"><a href="#на-кассе-осталась-незакрытая-смена" data-for="на-кассе-осталась-незакрытая-смена">На кассе осталась незакрытая смена</a></li><li class="depth-1"><a href="#накопитель-заполнен-или-истёк-его-срок" data-for="накопитель-заполнен-или-истёк-его-срок">Накопитель заполнен или истёк его срок</a></li><li class="depth-0"><a href="#что-не-является-поломкой" data-for="что-не-является-поломкой">Что не является поломкой</a></li><li class="depth-0"><a href="#чего-делать-нельзя" data-for="чего-делать-нельзя">Чего делать нельзя</a></li><li class="depth-0"><a href="#что-приготовить-перед-обращением-в-поддержку" data-for="что-приготовить-перед-обращением-в-поддержку">Что приготовить перед обращением в поддержку</a></li><li class="depth-0"><a href="#смежные-страницы" data-for="смежные-страницы">Смежные страницы</a></li><li class="overflow-end"></li></ul></div><div class="backlinks"><h3>Обратные ссылки</h3><ul id="list-2" class="overflow"><li><a href="../Касса-3-в-1/" class="internal">Касса 3 в 1</a></li><li><a href="../Касса-3-в-1/Запуск-точки" class="internal">Запуск точки</a></li><li><a href="../Касса-3-в-1/Обязанности-владельца" class="internal">Обязанности владельца</a></li><li><a href="../Касса-3-в-1/Работа-кассира" class="internal">Работа кассира</a></li><li><a href="../Касса-3-в-1/Термины" class="internal">Термины</a></li><li><a href="../Касса-3-в-1/Чего-касса-не-умеет" class="internal">Чего касса не умеет</a></li><li><a href="../Касса-3-в-1/Что-умеет-касса" class="internal">Что умеет касса</a></li><li class="overflow-end"></li></ul></div></div><footer class><p>Создано с помощью <a href="https://quartz.jzhao.xyz/">Quartz v4.5.2</a> © 2026</p><ul><li><a href="https://forgejo.nirbi.ru/nirbi/erp-ba-docs">Исходники (Forgejo)</a></li><li><a href="https://forgejo.nirbi.ru/nirbi/obsidian_erp">Vault (obsidian_erp)</a></li></ul></footer></div></div></body><script type="application/javascript" data-persist="true">function n(){let t=this.parentElement;t.classList.toggle("is-collapsed");let e=t.getElementsByClassName("callout-content")[0];if(!e)return;let l=t.classList.contains("is-collapsed");e.style.gridTemplateRows=l?"0fr":"1fr"}function c(){let t=document.getElementsByClassName("callout is-collapsible");for(let e of t){let l=e.getElementsByClassName("callout-title")[0],s=e.getElementsByClassName("callout-content")[0];if(!l||!s)continue;l.addEventListener("click",n),window.addCleanup(()=>l.removeEventListener("click",n));let o=e.classList.contains("is-collapsed");s.style.gridTemplateRows=o?"0fr":"1fr"}}document.addEventListener("nav",c);
+</script><script type="module" data-persist="true">function E(a,e){if(!a)return;function t(o){o.target===this&&(o.preventDefault(),o.stopPropagation(),e())}function n(o){o.key.startsWith("Esc")&&(o.preventDefault(),e())}a?.addEventListener("click",t),window.addCleanup(()=>a?.removeEventListener("click",t)),document.addEventListener("keydown",n),window.addCleanup(()=>document.removeEventListener("keydown",n))}function f(a){for(;a.firstChild;)a.removeChild(a.firstChild)}var m=class{constructor(e,t){this.container=e;this.content=t;this.setupEventListeners(),this.setupNavigationControls(),this.resetTransform()}isDragging=!1;startPan={x:0,y:0};currentPan={x:0,y:0};scale=1;MIN_SCALE=.5;MAX_SCALE=3;cleanups=[];setupEventListeners(){let e=this.onMouseDown.bind(this),t=this.onMouseMove.bind(this),n=this.onMouseUp.bind(this),o=this.onTouchStart.bind(this),r=this.onTouchMove.bind(this),i=this.onTouchEnd.bind(this),s=this.resetTransform.bind(this);this.container.addEventListener("mousedown",e),document.addEventListener("mousemove",t),document.addEventListener("mouseup",n),this.container.addEventListener("touchstart",o,{passive:!1}),document.addEventListener("touchmove",r,{passive:!1}),document.addEventListener("touchend",i),window.addEventListener("resize",s),this.cleanups.push(()=>this.container.removeEventListener("mousedown",e),()=>document.removeEventListener("mousemove",t),()=>document.removeEventListener("mouseup",n),()=>this.container.removeEventListener("touchstart",o),()=>document.removeEventListener("touchmove",r),()=>document.removeEventListener("touchend",i),()=>window.removeEventListener("resize",s))}cleanup(){for(let e of this.cleanups)e()}setupNavigationControls(){let e=document.createElement("div");e.className="mermaid-controls";let t=this.createButton("+",()=>this.zoom(.1)),n=this.createButton("-",()=>this.zoom(-.1)),o=this.createButton("Reset",()=>this.resetTransform());e.appendChild(n),e.appendChild(o),e.appendChild(t),this.container.appendChild(e)}createButton(e,t){let n=document.createElement("button");return n.textContent=e,n.className="mermaid-control-button",n.addEventListener("click",t),window.addCleanup(()=>n.removeEventListener("click",t)),n}onMouseDown(e){e.button===0&&(this.isDragging=!0,this.startPan={x:e.clientX-this.currentPan.x,y:e.clientY-this.currentPan.y},this.container.style.cursor="grabbing")}onMouseMove(e){this.isDragging&&(e.preventDefault(),this.currentPan={x:e.clientX-this.startPan.x,y:e.clientY-this.startPan.y},this.updateTransform())}onMouseUp(){this.isDragging=!1,this.container.style.cursor="grab"}onTouchStart(e){if(e.touches.length!==1)return;this.isDragging=!0;let t=e.touches[0];this.startPan={x:t.clientX-this.currentPan.x,y:t.clientY-this.currentPan.y}}onTouchMove(e){if(!this.isDragging||e.touches.length!==1)return;e.preventDefault();let t=e.touches[0];this.currentPan={x:t.clientX-this.startPan.x,y:t.clientY-this.startPan.y},this.updateTransform()}onTouchEnd(){this.isDragging=!1}zoom(e){let t=Math.min(Math.max(this.scale+e,this.MIN_SCALE),this.MAX_SCALE),n=this.content.getBoundingClientRect(),o=n.width/2,r=n.height/2,i=t-this.scale;this.currentPan.x-=o*i,this.currentPan.y-=r*i,this.scale=t,this.updateTransform()}updateTransform(){this.content.style.transform=`translate(${this.currentPan.x}px, ${this.currentPan.y}px) scale(${this.scale})`}resetTransform(){let t=this.content.querySelector("svg").getBoundingClientRect(),n=t.width/this.scale,o=t.height/this.scale;this.scale=1,this.currentPan={x:(this.container.clientWidth-n)/2,y:(this.container.clientHeight-o)/2},this.updateTransform()}},T=["--secondary","--tertiary","--gray","--light","--lightgray","--highlight","--dark","--darkgray","--codeFont"],y;document.addEventListener("nav",async()=>{let e=document.querySelector(".center").querySelectorAll("code.mermaid");if(e.length===0)return;y||=await import("https://cdnjs.cloudflare.com/ajax/libs/mermaid/11.4.0/mermaid.esm.min.mjs");let t=y.default,n=new WeakMap;for(let r of e)n.set(r,r.innerText);async function o(){for(let s of e){s.removeAttribute("data-processed");let c=n.get(s);c&&(s.innerHTML=c)}let r=T.reduce((s,c)=>(s[c]=window.getComputedStyle(document.documentElement).getPropertyValue(c),s),{}),i=document.documentElement.getAttribute("saved-theme")==="dark";t.initialize({startOnLoad:!1,securityLevel:"loose",theme:i?"dark":"base",themeVariables:{fontFamily:r["--codeFont"],primaryColor:r["--light"],primaryTextColor:r["--darkgray"],primaryBorderColor:r["--tertiary"],lineColor:r["--darkgray"],secondaryColor:r["--secondary"],tertiaryColor:r["--tertiary"],clusterBkg:r["--light"],edgeLabelBackground:r["--highlight"]}}),await t.run({nodes:e})}await o(),document.addEventListener("themechange",o),window.addCleanup(()=>document.removeEventListener("themechange",o));for(let r=0;r<e.length;r++){let v=function(){let g=l.querySelector("#mermaid-space"),h=l.querySelector(".mermaid-content");if(!h)return;f(h);let w=i.querySelector("svg").cloneNode(!0);h.appendChild(w),l.classList.add("active"),g.style.cursor="grab",u=new m(g,h)},M=function(){l.classList.remove("active"),u?.cleanup(),u=null},i=e[r],s=i.parentElement,c=s.querySelector(".clipboard-button"),d=s.querySelector(".expand-button"),p=window.getComputedStyle(c),L=c.offsetWidth+parseFloat(p.marginLeft||"0")+parseFloat(p.marginRight||"0");d.style.right=`calc(${L}px + 0.3rem)`,s.prepend(d);let l=s.querySelector("#mermaid-container");if(!l)return;let u=null;d.addEventListener("click",v),E(l,M),window.addCleanup(()=>{u?.cleanup(),d.removeEventListener("click",v)})}});
+</script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js" type="application/javascript" data-persist="true"></script><script src="../postscript.js" type="module" data-persist="true"></script></html>
